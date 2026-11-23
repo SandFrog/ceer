@@ -1,0 +1,9 @@
+[project]
+name = "cee-test"
+version = "1.0.0"
+description = "Intranet tool for recommending responsive CEE contacts"
+requires-python = ">=3.9"
+dependencies = [
+    "flask>=3.0,<4",
+    "waitress>=3.0,<4",
+]

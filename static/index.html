@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEE Responsiveness Ranking</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header>
+    <h1>CEE Responsiveness</h1>
+    <p class="subtitle">Vote on how responsive your CEE was. You can change your vote at any time.</p>
+  </header>
+
+  <section class="add-form card">
+    <h2>Add a CEE contact</h2>
+    <form id="add-form">
+      <div class="field-row">
+        <label>Name<input name="name" type="text" required placeholder="Jane Smith"></label>
+        <label>Title<input name="title" type="text" required placeholder="Account Manager, ACME Corp"></label>
+        <label>Email<input name="email" type="email" required placeholder="jane@acme.com"></label>
+        <label>Group<select name="group" required></select></label>
+      </div>
+      <button type="submit">Add contact</button>
+      <span id="form-msg" class="form-msg" role="status"></span>
+    </form>
+  </section>
+
+  <section class="controls">
+    <label for="group-filter">Group</label>
+    <select id="group-filter">
+      <option value="" selected>All groups</option>
+    </select>
+    <label for="sort">Sort by</label>
+    <select id="sort">
+      <option value="score" selected>Responsiveness score</option>
+      <option value="helpful">Most helpful votes</option>
+      <option value="newest">Newest first</option>
+      <option value="name">Name (A&ndash;Z)</option>
+    </select>
+  </section>
+
+  <section id="people" class="people-list" aria-live="polite">
+    <p class="loading">Loading&hellip;</p>
+  </section>
+
+  <script src="/app.js"></script>
+</body>
+</html>
